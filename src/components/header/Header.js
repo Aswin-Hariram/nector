@@ -1,6 +1,8 @@
-import '../Header.css';
-
+import "../header/Header.css";
+import SearchIcon from '@mui/icons-material/Search';
 import Logo from '../../assets/logo.png';
+import Select from "./Select";
+
 export default function Header(){
     return (
         <header>
@@ -11,11 +13,11 @@ export default function Header(){
                     </div>
                     <div className='col-sm-5'>
                         <div className='headerSearch d-flex align-items-center'>
-                            <div className='selectDrop'>
-                                Aswin test 3
-                            </div>
+                          <Select/>
+                        
                             <div className='search'>
                                 <input placeholder='Search' />
+                                <SearchIcon className='searchIcon'/>
                             </div>
                         </div>
                     </div>

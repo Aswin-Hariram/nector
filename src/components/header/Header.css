@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&display=swap");
+header {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 15px 0px;
+}
+body {
+  font-family: "Roboto";
+}
+img {
+  height: 45px;
+  align-self: center;             
+}
+header .headerSearch {
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  border: 1px solid #bce3c9;
+  cursor: pointer;
+}
+header .headerSearch .selectDrop {
+  width: 150px;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+header .headerSearch .selectDrop:after{
+  content:' ';
+  width: 1px;
+  height: 30px;
+  background: rgba(0,0,0,0.1);
+  position: absolute;
+  top: 5px;
+  right: 0px;
+}
+header .headerSearch .search {
+  width: 85%;
+  padding-left: 30px;
+  position:relative
+}
+header .headerSearch .search input {
+  width: 100%;
+  border: 0px;
+  outline: 0px !important;
+  height: 50%;
+}
+header .headerSearch .search .searchIcon{
+  position: absolute;
+  top: 3px;
+  right: 7px;
+  opacity: 0.5;
+  font-size: 25px !important;
+}
