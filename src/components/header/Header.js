@@ -12,7 +12,7 @@ export default function Header(){
                     <div className='col-sm-5'>
                         <div className='headerSearch d-flex align-items-center'>
                             <div className='selectDrop'>
-                                All Categories
+                                Aswin
                             </div>
                             <div className='search'>
                                 <input placeholder='Search' />
