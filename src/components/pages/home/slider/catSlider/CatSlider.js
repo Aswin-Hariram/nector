@@ -55,11 +55,6 @@ export default function CatSlider(){
                         
                             
                     </Slider>
-        <br/><br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
             </div>
         </div>
     );
