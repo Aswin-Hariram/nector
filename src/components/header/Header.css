@@ -52,3 +52,49 @@ header .headerSearch .search .searchIcon{
   opacity: 0.5;
   font-size: 25px !important;
 }
+
+header .list .list-inline-item .compare{
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+header .list .list-inline-item .whish{
+  height: 30px;
+  width: 30px;
+  margin-right: 18px;
+}
+header .list .list-inline-item .cart{
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
+
+header .header-Tabs{padding-left:40px ;
+margin-top: 10px;
+
+}
+header .header-Tabs li{
+  position: relative;
+  left: 100px;
+  
+}
+header .header-Tabs li span{
+  font-size: 20px;
+  
+  background-color: #bce3c9;
+  top: -20px;
+  width: 30px;
+  display: flex; 
+       justify-content: center;
+  height: 30px;
+  border-radius: 50%;
+ left: 25px;
+  color: #ffff;
+  font-weight: 200;
+  
+  position: absolute;
+}
+header .header-Tabs li span img {
+  margin-right: 150px
+
+}
