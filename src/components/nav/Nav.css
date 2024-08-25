@@ -11,3 +11,37 @@
     font-size: 20px !important;
     text-transform: capitalize !important;
 }
+
+.nav nav ul li button{
+    text-transform: capitalize !important;
+    color: rgba(0,0,0,0.7) !important;
+    font-size: 18px !important;
+    padding: 10px 25px !important;
+}
+
+.nav nav ul li button a{
+    text-decoration: none !important;
+    color: rgba(0,0,0,0.8) !important;
+    font-size: 20px !important;
+}
+
+.nav .part3 .phNo svg{
+    font-size: 30px !important;
+    opacity: 0.8;
+
+}
+
+.nav .part3 .phNo h3{
+    font-size: 22px !important;
+    line-height: 25px !important;
+    font-weight: bold;
+}
+.nav .part3 .phNo .info{
+    margin-left: 15px !important;
+    margin-top: 8px !important;
+}
+.nav .part3 .phNo p{
+    font-weight: 100;
+    font-size: 15px !important;
+
+}

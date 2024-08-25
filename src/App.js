@@ -2,14 +2,22 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/header/Header';
 import Home from './components/pages/home/Home';
-
+import About from './components/pages/About/About';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
 
 function App() {
   return (
 
     <div>
-    <Header/>
-      <Home />
+      <BrowserRouter>
+          <Header/>
+          <Home />
+
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/About" element={<About/>}/>
+          </Routes>
+      </BrowserRouter>
       </div>
     
   );
