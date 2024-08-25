@@ -8,8 +8,17 @@ header {
 body {
   font-family: "Roboto";
 }
+
+
+.row .srow{
+ padding: 15px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
 img {
-  height: 45px;
+  height: auto;
+  width: 150px;
   align-self: center;             
 }
 header .headerSearch {

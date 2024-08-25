@@ -1,8 +1,4 @@
 import React from 'react';
-
-const About=()=>{
-    return{
-        
-    }
+export default function About(){
+    return <h1>Aswin</h1>;
 }
-export default About;

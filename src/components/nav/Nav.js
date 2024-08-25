@@ -5,11 +5,12 @@ import Button from '@mui/material/Button';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import GridViewIcon from '@mui/icons-material/GridView';
 import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
+import Home from '../pages/home/Home';
 const Nav=()=>{
     return(
         <div className='nav d-flex align-items-center'>
             <div className='container-fluid'>
-                <div className='row'>
+                <div className='row' >
                 <div className='col-sm-3 part1 d-flex align-items-center'>
                     <Button className='bg-g text-white catTab'>
                         <GridViewIcon/> &nbsp;Browse All Categories
@@ -19,10 +20,10 @@ const Nav=()=>{
                     <nav>
                         <ul className='list list-inline mb-0'>
                             <li className='list-inline-item'>
-                                <Button><Link>Home</Link></Button>
+                                <Button><Link to="/Home">Home</Link></Button>
                             </li>
                             <li className='list-inline-item'>
-                                <Button><Link>About</Link></Button>
+                                <Button><Link to="/About">About</Link></Button>
                             </li>
                             <li className='list-inline-item'>
                                 <Button><Link>Deals</Link></Button>
@@ -44,7 +45,7 @@ const Nav=()=>{
                         <span><HeadphonesOutlinedIcon/></span>
                         <div className='info ml-3'>
                             <h3 className='text-g'>1900-888-000</h3>
-                            <p >24/7 Support Center</p>
+                            <p className='mb-2'>24/7 Support Center</p>
                         </div>
                     </div>
                 </div>

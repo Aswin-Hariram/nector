@@ -13,10 +13,11 @@ export default function Header(){
         <header>
             <div className='container-fluid'>
                 <div className='row'>
+                    <div className="srow">
                     <div className='col-sm-2'>
                         <img src={Logo} alt='Logo'/>
                     </div>
-                    <div className='col-sm-5'>
+                    <div className='col-sm-5 search_box'>
                         <div className='headerSearch d-flex align-items-center'>
                           <Select/>
                         
@@ -44,6 +45,7 @@ export default function Header(){
                             Cart
                         </li>
                     </ul>
+                    </div>
                     </div>
                 </div>
 
