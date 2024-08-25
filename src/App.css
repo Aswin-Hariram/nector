@@ -1,9 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&display=swap");
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
+.cursor {
+  cursor: pointer;
+}
+.hd {
+  font-size: 30px;
+  font-weight: 300;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
 
 .container-fluid {
-  padding: 5px;
+  padding: 0px 45px;
 }
