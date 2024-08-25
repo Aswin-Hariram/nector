@@ -1,7 +1,7 @@
 import banner1 from '../../../../assets/banner3.png'
 import banner3 from '../../../../assets/banner4.png'
 import banner2 from '../../../../assets/banner5.png'
-import "./Banner.css";
+import "./BannerPoster.css";
 export default function Banner(){
     return (
         <div className="Banner-Section">

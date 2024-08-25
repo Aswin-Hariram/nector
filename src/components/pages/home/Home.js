@@ -1,6 +1,6 @@
 import CatSlider from "./slider/catSlider/CatSlider";
 import HomeSlider from "./slider/homeSlider/HomeSlider";
-import Banner from "./slider/catSlider/Banner";
+import Banner from "./Banner/BannerPoster";
 export default function Home(){
     return (
         <div>

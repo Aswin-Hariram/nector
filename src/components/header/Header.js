@@ -44,6 +44,7 @@ export default function Header(){
                             <span className="badge">3</span>
                             Cart
                         </li>
+                        
                     </ul>
                     </div>
                     </div>
