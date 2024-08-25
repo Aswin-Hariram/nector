@@ -18,3 +18,10 @@ body {
 .container-fluid {
   padding: 0px 45px;
 }
+.bg-g,
+.bg-success {
+  background: #3bb77e !important;
+}
+.text-g {
+  color: #3bb77e;
+}

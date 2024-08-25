@@ -74,18 +74,52 @@ img {
 }
 .home_slider_main .info {
   position: absolute;
-  top: 15%;
+  top: 10%;
   left: 7%;
   z-index: 100;
 }
 
 .home_slider_main .info h2 {
-  font-size: 80px;
+  font-size: 70px;
+  font-family: "Poppins";
   color: rgba(44, 38, 38, 0.7);
   font-weight: bold;
 }
 .home_slider_main .info p {
-  font-size: 35px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Poppins";
   color: #7e7e7e;
+}
+
+.homeSlider .newsletter_banner {
+  width: 550px;
+  height: 70px;
+  position: absolute;
+  bottom: 100px;
+  left: 7%;
+  z-index: 10;
+}
+.homeSlider .newsletter_banner input {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: white;
+  border-radius: 50px;
+  border: none;
+  outline: none !important;
+  padding-left: 40px;
+  font-size: 20px;
+}
+
+.homeSlider .newsletter_banner button {
+  padding: 10px 60px !important;
+  border-radius: 50px !important;
+  color: #fff;
+  position: absolute;
+
+  top: 0px;
+  font-size: 20px;
+  height: 70px !important;
+  right: 0px;
 }

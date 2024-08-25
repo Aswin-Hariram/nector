@@ -4,6 +4,7 @@ import slide1 from '../../../../assets/banner1.png'
 import slide2 from '../../../../assets/banner2.png'
 import "./HomeSlider.css";
 import { Slide } from "@mui/material";
+import Button from '@mui/material/Button';
 
 
 export default function HomeSlider(){
@@ -18,10 +19,10 @@ export default function HomeSlider(){
     }
   return (
     <div className="homeSlider">
-        <div className="container-fluid">
+        <section className="container-fluid position-relative">
             <Slider {...settings} className="home_slider_main">
                 <div className="item">
-                    <img src={slide1} alt="bg1" className="w-100" /> 
+                    <img src={slide2} alt="bg1" className="w-100" /> 
                     <div className="info">
                         <h2 className="mb-4">
                         Don't miss amazing<br/>
@@ -29,13 +30,30 @@ export default function HomeSlider(){
                         </h2>
                         <p>Sign up for the daily newsletter</p>
                     </div>
+                     
                 </div>
                 <div className="item">
-                    <img src={slide2} alt="bg1" className="w-100"/> 
+                    <img src={slide1} alt="bg1" className="w-100"/> 
+                     <div className="info">
+                        <h2 className="mb-4">
+                        Fresh Vegetables<br/>
+                        Big Discount
+                        </h2>
+                        <p>Sign up for the daily newsletter</p>
+                       
+                    </div>
                 </div>
               
             </Slider>
-        </div>
+              <div className="newsletter_banner">
+                        <input type="text" placeholder="Your email address"/>
+                        <Button className="bg-g">Subscribe</Button>
+                    </div>
+
+        </section>
+       
     </div>
+
+
   );
 }
