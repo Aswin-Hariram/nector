@@ -1,6 +1,5 @@
 import Slider from 'react-slick';
 import './CatSlider.css';
-import SearchIcon from '@mui/icons-material/Search';
 import i1 from '../../../../assets/mango.png';
 
 
