@@ -1,9 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import slide1 from '../../../../assets/banner1.png'
-import slide2 from '../../../../assets/banner2.png'
+import slide1 from '../../../../../assets/banner1.png'
+import slide2 from '../../../../../assets/banner2.png'
 import "./HomeSlider.css";
-import { Slide } from "@mui/material";
 import Button from '@mui/material/Button';
 
 
@@ -46,6 +45,7 @@ export default function HomeSlider(){
               
             </Slider>
               <div className="newsletter_banner">
+                        
                         <input type="text" placeholder="Your email address"/>
                         <Button className="bg-g">Subscribe</Button>
                     </div>
