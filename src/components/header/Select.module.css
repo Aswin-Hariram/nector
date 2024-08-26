@@ -43,7 +43,7 @@
 }
 
 .selectDrop .searchResults li:hover {
-  background: #3bb77e;
+  background: red;
   border-radius: 7px;
   color: #fff;
 }

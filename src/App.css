@@ -20,8 +20,8 @@ body {
 }
 .bg-g,
 .bg-success {
-  background: #3bb77e !important;
+  background: red !important;
 }
 .text-g {
-  color: #3bb77e;
+  color: red;
 }

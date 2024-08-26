@@ -13,12 +13,11 @@ import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import Logo from '../../assets/logo.png';
 import {Link} from 'react-router-dom';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
+import CallIcon from '@mui/icons-material/Call';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 import GooglePlayIcon from "../../assets/googleplay.png"
 import AppleStoreIcon from "../../assets/applestore.png"
-//import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
 const Footer=()=>{
     return(
         <div className='footerWrapper'>
@@ -65,7 +64,7 @@ const Footer=()=>{
                         <h3>Details</h3>
                         <p>Awesome grocery store website template</p>
                         <p><LocationOnOutlinedIcon/> <strong>Address:</strong> 45, Anna Nagar, South Ukkadam, Coimbatore, 641-001</p>
-                        <p><HeadphonesOutlinedIcon/> <strong>Call Us:</strong> 1900-888-000</p>
+                        <p><CallIcon/> <strong>Call Us:</strong> 1900-888-000</p>
                         <p><EmailOutlinedIcon/> <strong>Email:</strong> nector@gmail.com</p>
                         <p><WatchLaterOutlinedIcon/> <strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
                     </div>
@@ -98,10 +97,10 @@ const Footer=()=>{
                             <div className='col'>
                                 <ul className='footer-list mb-sm-5 mb-md-0'>
                                     <h3>Corporate</h3>
-                                    <li><Link to="#">Become a Vendor</Link></li>
+                                    <li><Link to="#">Sell on Snooplay</Link></li>
                                     <li><Link to="#">Affiliate Program</Link></li>
-                                    <li><Link to="#">Farm Business</Link></li>
-                                    <li><Link to="#">Farm Careers</Link></li>
+                                    <li><Link to="#">Bulk Purchase</Link></li>
+                                    <li><Link to="#">Corporate Order</Link></li>
                                     <li><Link to="#">Our Suppliers</Link></li>
                                     <li><Link to="#">Accessibility</Link></li>
                                     <li><Link to="#">Compare products</Link></li>
@@ -110,8 +109,8 @@ const Footer=()=>{
                             <div className='col'>
                                 <ul className='footer-list mb-sm-5 mb-md-0'>
                                     <h3>Popular</h3>
-                                    <li><Link to="#">Milk &amp; Flavoured Milk</Link></li>
-                                    <li><Link to="#">Butter and Margarine</Link></li>
+                                    <li><Link to="#">Barbie &amp; Teddy</Link></li>
+                                    <li><Link to="#">Remote Controlled Toys</Link></li>
                                     <li><Link to="#">Eggs Substitutes</Link></li>
                                     <li><Link to="#">Marmalades</Link></li>
                                     <li><Link to="#">Sour Cream and Dips</Link></li>

@@ -9,6 +9,8 @@ import IconCompare from '../../assets/refresh.svg';
 import IconWhishlist from '../../assets/icon-heart.svg';
 import IconCart from '../../assets/icon-cart.svg';
 import Nav from "../nav/Nav";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import GridViewIcon from '@mui/icons-material/GridView';
 import { useState } from "react";
 export default function Header(){
 
@@ -17,12 +19,17 @@ export default function Header(){
 
     return (
         <header>
+            <Nav/>
+            
             <div className='container-fluid'>
                 <div className='row'>
                     <div className="srow">
-                    <div className='col-sm-2'>
-                        <img src={Logo} alt='Logo'/>
-                    </div>
+                    <div className='col-sm-2 part1 d-flex align-items-center'>
+                    <Button className='bg-g text-white catTab'>
+                        <GridViewIcon/> &nbsp;Browse All Categories
+                    <KeyboardArrowDownIcon/></Button>
+                </div>
+                   
                     <div className='col-sm-5 search_box'>
                         <div className='headerSearch d-flex align-items-center'>
                           <Select/>
@@ -63,7 +70,8 @@ export default function Header(){
 
                
             </div>
-            <Nav/>
+            <hr/>
+            
 
             <Modal  style={{
                 overlay:{
