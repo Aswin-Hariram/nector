@@ -73,7 +73,7 @@ const Footer=()=>{
                         <div className='row d-flex' >
                             <div className='col d-flex'>
                                 <ul className='footer-list mb-sm-5 mb-md-0'>
-                                    <h3>Company</h3>
+                                    <h3>Gowtham</h3>
                                     <li><Link to="#">About Us</Link></li>
                                     <li><Link to="#">Delivery Information</Link></li>
                                     <li><Link to="#">Privacy Policy</Link></li>
