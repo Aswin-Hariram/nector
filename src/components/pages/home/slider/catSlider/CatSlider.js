@@ -16,7 +16,7 @@ export default function CatSlider(){
            {color :'#feefea',image:'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-2.png',name:"Strawberry"},
         {color :'#fff3ff',image:'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-5.png',name:'Custard Apple'},
         {color :'#f2fce4',image:'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-6.png',name:'Green Grapes'},
-        {color :'#fff3ff',image:'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-7.png',name:'Organic Orange'},
+        {color :'#fff3ff',image:'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-7.png',name:'Orange'},
         {color :'#feefea',image:'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-4.png',name:'Black Plum'},
         {color :'#f2fce4',image:'https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/cat-1.png',name:'Cabbage'}
     ]);
@@ -28,7 +28,7 @@ export default function CatSlider(){
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 10,
+        slidesToShow: 8,
         slidesToScroll: 1,
         fade:false,
         arrow:false

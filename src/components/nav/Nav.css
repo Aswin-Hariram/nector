@@ -32,20 +32,18 @@
 .nav .part3 .phNo svg{
     font-size: 30px !important;
     opacity: 0.8;
-
 }
-
 .nav .part3 .phNo h3{
     font-size: 22px !important;
     line-height: 25px !important;
     font-weight: bold;
 }
-.nav .part3 .phNo .info{
-    margin-left: 15px !important;
-    margin-top: 8px !important;
-}
 .nav .part3 .phNo p{
     font-weight: 100;
     font-size: 15px !important;
     opacity: 0.8px;
+}
+.nav .part3 .phNo .info{
+    margin-left: 15px !important;
+    margin-top: 8px !important;
 }

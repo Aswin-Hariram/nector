@@ -9,7 +9,6 @@ import IconCompare from '../../assets/refresh.svg';
 import IconWhishlist from '../../assets/icon-heart.svg';
 import IconCart from '../../assets/icon-cart.svg';
 import Nav from "../nav/Nav";
-
 import { useState } from "react";
 export default function Header(){
 
@@ -77,6 +76,6 @@ export default function Header(){
                
             </Modal>
         </header>
-            
+
     );
 }
