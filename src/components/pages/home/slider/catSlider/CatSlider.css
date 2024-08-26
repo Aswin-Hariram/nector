@@ -19,7 +19,8 @@
   font-weight: 350px !important;
   align-items: center;
   display: flex;
-  font-size: 25px;
+
+  font-size: 20px;
   justify-content: center;
   text-align: center;
 }
@@ -36,7 +37,7 @@
   height: 250px;
 
   justify-content: center;
-  padding: 15px;
+  padding: 10px;
   transition: all 0.2 ease-in-out;
   position: relative;
   flex-direction: column;
