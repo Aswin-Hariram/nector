@@ -1,4 +1,5 @@
 import "../header/Header.css";
+import Modal from 'react-modal';
 import SearchIcon from '@mui/icons-material/Search';
 import Logo from '../../assets/logo.png';
 import Select from "./Select";
@@ -8,7 +9,13 @@ import IconCompare from '../../assets/refresh.svg';
 import IconWhishlist from '../../assets/icon-heart.svg';
 import IconCart from '../../assets/icon-cart.svg';
 import Nav from "../nav/Nav";
+
+import { useState } from "react";
 export default function Header(){
+
+    const [visible,setVisible] = useState(false);
+    
+
     return (
         <header>
             <div className='container-fluid'>
@@ -44,6 +51,11 @@ export default function Header(){
                             <span className="badge">3</span>
                             Cart
                         </li>
+
+                         <li className="list-inline-item btn">
+                            <Button onClick={()=>{setVisible(!visible)}} className="bg-g">Login/Signup</Button>
+                        </li>
+                        
                         
                     </ul>
                     </div>
@@ -53,6 +65,17 @@ export default function Header(){
                
             </div>
             <Nav/>
+
+            <Modal  style={{
+                overlay:{
+                    background:'#ffff'
+                }
+            }} isOpen={visible} onRequestClose={()=>{setVisible(false)} }>
+               
+                   
+
+               
+            </Modal>
         </header>
             
     );

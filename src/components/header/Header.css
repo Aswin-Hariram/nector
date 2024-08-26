@@ -9,20 +9,19 @@ body {
   font-family: "Roboto";
 }
 
-
-.row .srow{
- padding: 15px;
+.row .srow {
+  padding: 15px;
   display: flex;
   justify-items: center;
   align-items: center;
 }
 img {
-  height: auto;
-  width: 150px;
-  align-self: center;             
+  height: 100px;
+  width: 100px;
+  align-self: center;
 }
 header .headerSearch {
-  width: 100%;
+  width: 80%;
   height: 50px;
   padding: 15px;
   border: 1px solid #bce3c9;
@@ -34,11 +33,11 @@ header .headerSearch .selectDrop {
   font-weight: 500;
   position: relative;
 }
-header .headerSearch .selectDrop:after{
-  content:' ';
+header .headerSearch .selectDrop:after {
+  content: " ";
   width: 1px;
   height: 30px;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   position: absolute;
   top: 5px;
   right: 0px;
@@ -46,7 +45,7 @@ header .headerSearch .selectDrop:after{
 header .headerSearch .search {
   width: 85%;
   padding-left: 30px;
-  position:relative
+  position: relative;
 }
 header .headerSearch .search input {
   width: 100%;
@@ -54,7 +53,7 @@ header .headerSearch .search input {
   outline: 0px !important;
   height: 50%;
 }
-header .headerSearch .search .searchIcon{
+header .headerSearch .search .searchIcon {
   position: absolute;
   top: 3px;
   right: 7px;
@@ -62,48 +61,58 @@ header .headerSearch .search .searchIcon{
   font-size: 25px !important;
 }
 
-header .list .list-inline-item .compare{
+header .list .list-inline-item .compare {
   height: 40px;
   width: 40px;
   margin-right: 10px;
 }
-header .list .list-inline-item .whish{
+header .list .list-inline-item .whish {
   height: 30px;
   width: 30px;
   margin-right: 18px;
 }
-header .list .list-inline-item .cart{
+header .list .list-inline-item .cart {
   height: 30px;
   width: 30px;
   margin-right: 20px;
 }
 
-header .header-Tabs{padding-left:40px ;
-margin-top: 10px;
-
+header .header-Tabs {
+  padding-left: 40px;
 }
-header .header-Tabs li{
+header .header-Tabs li {
   position: relative;
-  left: 100px;
-  
+  left: 80px;
 }
-header .header-Tabs li span{
+header .header-Tabs li .badge {
   font-size: 20px;
-  
+
   background-color: #bce3c9;
   top: -20px;
   width: 30px;
-  display: flex; 
-       justify-content: center;
+  display: flex;
+  justify-content: center;
   height: 30px;
   border-radius: 50%;
- left: 25px;
+  left: 25px;
   color: #ffff;
   font-weight: 200;
-  
+
   position: absolute;
 }
-header .header-Tabs li span img {
-  margin-right: 150px
+header .header-Tabs li button {
+  color: white;
+  display: flex;
+  justify-content: center;
+  border: 0px !important;
+  cursor: pointer;
+  align-items: center;
+}
 
+header .header-Tabs li span img {
+  margin-right: 150px;
+}
+
+header Modal {
+  background-color: red;
 }
