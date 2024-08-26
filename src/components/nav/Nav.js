@@ -5,7 +5,6 @@ import Button from '@mui/material/Button';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import GridViewIcon from '@mui/icons-material/GridView';
 import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
-import Home from '../pages/home/Home';
 const Nav=()=>{
     return(
         <div className='nav d-flex align-items-center'>

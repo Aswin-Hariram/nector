@@ -33,7 +33,7 @@ img {
   height: 50px !important;
   border-radius: 50% !important;
   background: #0d9354b7 !important;
-  z-index: 1000 !important;
+  z-index: 300 !important;
   font-family: FontAwesome !important;
   margin-left: 2%;
   margin-right: 2%;
