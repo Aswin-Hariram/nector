@@ -96,7 +96,7 @@ const Footer=()=>{
                             </div>
                             <div className='col'>
                                 <ul className='footer-list mb-sm-5 mb-md-0'>
-                                    <h3>Corporate</h3>
+                                    <h3>Aswin</h3>
                                     <li><Link to="#">Sell on Snooplay</Link></li>
                                     <li><Link to="#">Affiliate Program</Link></li>
                                     <li><Link to="#">Bulk Purchase</Link></li>
