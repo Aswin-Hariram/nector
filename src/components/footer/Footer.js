@@ -139,10 +139,10 @@ const Footer=()=>{
                     </div>
                     
                     <div className='col-md-3 part3'>
-                        <div className='d-flex align-items-center'>
-                            <h5>Follow Us</h5>
+                        <div className='d-flex align-items-center box'>
+                            <h5>Follow Us: </h5>
                             <ul className='list list-inline align-self-end'>
-                                <li className=' float-right align-items-end list-inline-item'>
+                                <li className='list-inline-item'>
                                 <Link to="#"><FacebookRoundedIcon/></Link>
                                 </li>
                                 <li className='list-inline-item'>
