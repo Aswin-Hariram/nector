@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&display=swap");
+header {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 15px 0px;
+}
+body {
+  font-family: "Roboto";
+}
+
+.row .srow {
+  padding: 15px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+img {
+  height: 100px;
+  width: 100px;
+  align-self: center;
+}
+header .headerSearch {
+  width: 80%;
+  height: 50px;
+  padding: 15px;
+  border: 1px solid #bce3c9;
+  cursor: pointer;
+}
+header .headerSearch .selectDrop {
+  width: 150px;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+header .headerSearch .selectDrop:after {
+  content: " ";
+  width: 1px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 5px;
+  right: 0px;
+}
+header .headerSearch .search {
+  width: 85%;
+  padding-left: 30px;
+  position: relative;
+}
+header .headerSearch .search input {
+  width: 100%;
+  border: 0px;
+  outline: 0px !important;
+  height: 50%;
+}
+header .headerSearch .search .searchIcon {
+  position: absolute;
+  top: 3px;
+  right: 7px;
+  opacity: 0.5;
+  font-size: 25px !important;
+}
+
+header .list .list-inline-item .compare {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+header .list .list-inline-item .whish {
+  height: 30px;
+  width: 30px;
+  margin-right: 18px;
+}
+header .list .list-inline-item .cart {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
+
+header .header-Tabs {
+  padding-left: 40px;
+}
+header .header-Tabs li {
+  position: relative;
+  left: 80px;
+}
+header .header-Tabs li .badge {
+  font-size: 20px;
+
+  background-color: #bce3c9;
+  top: -20px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  border-radius: 50%;
+  left: 25px;
+  color: #ffff;
+  font-weight: 200;
+
+  position: absolute;
+}
+header .header-Tabs li button {
+  color: white;
+  display: flex;
+  justify-content: center;
+  border: 0px !important;
+  cursor: pointer;
+  align-items: center;
+}
+
+header .header-Tabs li span img {
+  margin-right: 150px;
+}
+
+header Modal {
+  background-color: red;
+}

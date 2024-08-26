@@ -1,0 +1,125 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css");
+.homeSlider {
+  padding: 30px 0;
+}
+
+.home_slider_main {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  margin: 15px;
+}
+
+.stick_arrow {
+  position: absolute;
+  top: 47%;
+  height: 40px;
+  width: 40px !important;
+  border-radius: 50% !important;
+  background-color: red !important;
+}
+.home_slider_main .item {
+  height: 500px;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.slick-arrow {
+  position: absolute;
+  top: 47%;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background: #0d9354b7 !important;
+  z-index: 300 !important;
+  font-family: FontAwesome !important;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.slick-arrow .slick-pred {
+  left: 2% !important ;
+}
+.slick-arrow .slick-next {
+  right: 1000% !important ;
+}
+.slick-prev:before {
+  content: "\f104" !important;
+  font-size: 30px !important;
+}
+.slick-next:before {
+  content: "\f105" !important;
+  font-size: 30px !important;
+}
+.slick-arrow:hover {
+  background: #3bb77e !important;
+}
+
+.home_slider_main .slick-dots {
+  position: absolute;
+  bottom: 30px !important;
+}
+.home_slider_main .slick-dots button {
+  width: 10px !important;
+  height: 10px !important;
+  font-size: 16px !important;
+}
+.slick-active button::before {
+  color: #0d9354b7 !important;
+}
+
+.home_slider_main .item {
+  position: relative;
+}
+.home_slider_main .info {
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  z-index: 100;
+}
+
+.home_slider_main .info h2 {
+  font-size: 70px;
+  font-family: "Poppins";
+  color: rgba(44, 38, 38, 0.7);
+  font-weight: bold;
+}
+.home_slider_main .info p {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Poppins";
+  color: #7e7e7e;
+}
+
+.homeSlider .newsletter_banner {
+  width: 550px;
+  height: 70px;
+  position: absolute;
+  bottom: 100px;
+  left: 7%;
+  z-index: 10;
+}
+.homeSlider .newsletter_banner input {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: white;
+  border-radius: 50px;
+  border: none;
+  outline: none !important;
+  padding-left: 40px;
+  font-size: 20px;
+}
+
+.homeSlider .newsletter_banner button {
+  padding: 10px 60px !important;
+  border-radius: 50px !important;
+  color: #fff;
+  position: absolute;
+
+  top: 0px;
+  font-size: 20px;
+  height: 70px !important;
+  right: 0px;
+}

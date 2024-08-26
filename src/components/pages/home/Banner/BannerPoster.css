@@ -1,0 +1,13 @@
+.Banner-Section {
+  padding: 30px 0;
+  margin-bottom: 100px;
+}
+.Banner-Section .box {
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.Banner-Section .box:hover img {
+  transform: scale(1.1);
+}
