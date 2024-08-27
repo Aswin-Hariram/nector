@@ -1,0 +1,183 @@
+.snooplay-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.snooplay-login-box {
+  background-color: #fffefe;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.snooplay-login-box .close {
+  display: flex;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  justify-content: right;
+}
+
+.snooplay-logo img {
+  width: auto;
+  margin-bottom: 20px;
+}
+h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #030303;
+}
+
+.social-login-buttons {
+  margin-bottom: 20px;
+}
+
+.social-login {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.google {
+  background-color: #4285f4;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.apple {
+  background-color: #000;
+}
+
+hr {
+  border: 0.5px solid #333;
+  margin: 20px 0;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #000000;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #adacac;
+  font-size: 14px;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.show-password-icon {
+  position: absolute;
+
+  cursor: pointer;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember-me input {
+  margin-right: 5px;
+  color: #000;
+}
+
+.remember-me label {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.login-btn {
+  background-color: #3bb77e;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.forgot-password {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.forgot-password a {
+  font-size: 12px;
+  cursor: pointer;
+  font-family: "Poppins ";
+  color: #ca1616;
+  text-decoration: none;
+}
+.buttons {
+  width: 250px;
+  height: 50px;
+  margin: 25px;
+  position: relative;
+  box-shadow: 0 0 20px 9px #d831311f;
+  border-radius: 30px;
+}
+.login {
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+}
+#btn {
+  top: 0;
+  left: 50%;
+  position: absolute;
+  width: 140px;
+  height: 100%;
+  background: linear-gradient(to right, rgb(199, 22, 22), rgb(235, 83, 6));
+  border-radius: 30px;
+  transition: 0.5s;
+}
+#btnlogin {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 140px;
+  height: 100%;
+  background: linear-gradient(to right, rgb(199, 22, 22), rgb(235, 83, 6));
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.sign {
+  width: 100%;
+  background-color: #ffffff;
+  color: #adacac;
+  font-size: 14px;
+}

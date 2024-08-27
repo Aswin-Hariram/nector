@@ -1,66 +1,70 @@
-footer{
-    padding: 60px 0px;
+footer {
+  padding: 60px 0px;
+  font-family: "Poppins";
+}
+h3 {
+  font-family: "Roboto";
+  font-weight: 400;
+}
+footer .part1 svg {
+  color: #3bb77e !important;
 }
 
-footer .part1 svg{
-    color: #3bb77e !important;
+footer .part2 li {
+  list-style: none;
+  margin-bottom: 7px;
+  text-decoration: none;
+}
+footer .part2 ul li a {
+  color: #000;
+  opacity: 0.8;
+  font-size: 500;
+  list-style: none;
+  margin-bottom: 7px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+footer .part2 h3 {
+  color: black;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+footer .part1 h3 {
+  color: black;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+footer .part2 ul li a:hover {
+  color: #3bb77e !important;
+  opacity: 1;
+  padding-left: 5px;
+}
+footer .lastStrip {
+  padding: 15px 0px;
+  position: relative;
 }
 
-footer .part2 li{
-    list-style: none;
-    margin-bottom: 7px;
-    text-decoration: none;
-}
-footer .part2 ul li a{
-    color: #000;
-    opacity: 0.8;
-    font-size: 500;
-    list-style: none;
-    margin-bottom: 7px;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-}
-footer .part2 h3{
-    color: black;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-footer .part1 h3{
-    color: black;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-footer .part2 ul li a:hover{
-    color: #3bb77e !important;
-    opacity: 1;
-    padding-left: 5px;
-}
-footer .lastStrip{
-    padding: 15px 0px;
-    position: relative;
+footer .lastStrip .part3 {
+  position: absolute;
+  right: 0px;
 }
 
-footer .lastStrip .part3{
-    position: absolute;
-    right: 0px;
+footer .list-inline-item {
+  margin-left: 5px;
 }
-
-footer .list-inline-item{
-    margin-left: 5px;
+footer .lastStrip .part3 ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #3bb77e;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out !important;
 }
-footer .lastStrip .part3 ul li a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #3bb77e;
-    border-radius: 50%;
-    transition: all 0.2s ease-in-out !important;
+footer .lastStrip .part3 ul li a svg {
+  color: #fff !important;
 }
-footer .lastStrip .part3 ul li a svg{
-    color: #fff !important;
-}
-footer .lastStrip .part3 ul li a:hover{
-    background-color: #f6bd60;
+footer .lastStrip .part3 ul li a:hover {
+  background-color: #f6bd60;
 }

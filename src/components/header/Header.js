@@ -3,13 +3,17 @@ import Modal from 'react-modal';
 import SearchIcon from '@mui/icons-material/Search';
 import Logo from '../../assets/logo.png';
 import Select from "./Select";
+import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from '@mui/material/Button';
+import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined';
 import IconCompare from '../../assets/refresh.svg';
-import IconWhishlist from '../../assets/icon-heart.svg';
-import IconCart from '../../assets/icon-cart.svg';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Nav from "../nav/Nav";
+
 import { useState } from "react";
+import Login from "./Login";
 export default function Header(){
 
     const [visible,setVisible] = useState(false);
@@ -36,17 +40,17 @@ export default function Header(){
                     <div className="col-sm-5">
                     <ul className="list list-inline mb-0 header-Tabs">
                         <li className="list-inline-item">
-                            <img src={IconCompare} className="compare"></img>
+                            <AutorenewOutlinedIcon />
                             <span className="badge">3</span>
                             Compare
                         </li>
                         <li className="list-inline-item">
-                            <img src={IconWhishlist} className="whish"></img>
+                            <FavoriteBorderOutlinedIcon />
                             <span className="badge">3</span>
                             Whislist
                         </li>
                         <li className="list-inline-item">
-                            <img src={IconCart} className="cart"></img>
+                            <span><Link to="/Cart"><ShoppingCartOutlinedIcon /></Link></span>
                             <span className="badge">3</span>
                             Cart
                         </li>
@@ -64,17 +68,7 @@ export default function Header(){
                
             </div>
             <Nav/>
-
-            <Modal  style={{
-                overlay:{
-                    background:'#ffff'
-                }
-            }} isOpen={visible} onRequestClose={()=>{setVisible(false)} }>
-               
-                   
-
-               
-            </Modal>
+             {visible && <div className="body-login"><Login data={visible} setVisible={setVisible}/></div>}
         </header>
 
     );

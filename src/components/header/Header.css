@@ -3,6 +3,7 @@ header {
   width: 100%;
   height: auto;
   margin: auto;
+  position: relative;
   padding: 15px 0px;
 }
 body {
@@ -113,6 +114,13 @@ header .header-Tabs li span img {
   margin-right: 150px;
 }
 
-header Modal {
-  background-color: red;
+.body-login {
+  left: 0;
+  right: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 1000;
+  top: 3%;
 }
