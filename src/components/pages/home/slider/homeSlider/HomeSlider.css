@@ -38,20 +38,8 @@ img {
   margin-left: 2%;
   margin-right: 2%;
 }
-.slick-arrow .slick-pred {
-  left: 2% !important ;
-}
-.slick-arrow .slick-next {
-  right: 1000% !important ;
-}
-.slick-prev:before {
-  content: "\f104" !important;
-  font-size: 30px !important;
-}
-.slick-next:before {
-  content: "\f105" !important;
-  font-size: 30px !important;
-}
+
+
 .slick-arrow:hover {
   background: #3bb77e !important;
 }

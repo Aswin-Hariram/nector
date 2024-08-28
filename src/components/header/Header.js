@@ -40,17 +40,17 @@ export default function Header(){
                     <div className="col-sm-5">
                     <ul className="list list-inline mb-0 header-Tabs">
                         <li className="list-inline-item">
-                            <AutorenewOutlinedIcon />
+                            <AutorenewOutlinedIcon className="cart"/>
                             <span className="badge">3</span>
                             Compare
                         </li>
                         <li className="list-inline-item">
-                            <FavoriteBorderOutlinedIcon />
+                            <FavoriteBorderOutlinedIcon className="cart"/>
                             <span className="badge">3</span>
                             Whislist
                         </li>
                         <li className="list-inline-item">
-                            <span><Link to="/Cart"><ShoppingCartOutlinedIcon /></Link></span>
+                            <span><Link to="/Cart"><ShoppingCartOutlinedIcon className="cart"/></Link></span>
                             <span className="badge">3</span>
                             Cart
                         </li>

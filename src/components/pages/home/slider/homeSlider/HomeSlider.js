@@ -7,6 +7,30 @@ import Button from '@mui/material/Button';
 
 
 export default function HomeSlider(){
+    
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "red" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "green" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+    
   var settings  ={
         dots: true,
     infinite: true,
@@ -14,10 +38,11 @@ export default function HomeSlider(){
     slidesToShow: 1,
     slidesToScroll: 1,
     fade:true,
-    arrow:true
+    arrow:false
     }
   return (
     <div className="homeSlider">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
         <section className="container-fluid position-relative">
             <Slider {...settings} className="home_slider_main">
                 <div className="item">

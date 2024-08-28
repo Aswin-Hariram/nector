@@ -101,6 +101,12 @@ header .header-Tabs li .badge {
 
   position: absolute;
 }
+header .header-Tabs li .cart{
+  color: black;
+}
+header .header-Tabs li .cart:hover{
+  color: #3bb77e
+}
 header .header-Tabs li button {
   color: white;
   display: flex;
@@ -117,7 +123,7 @@ header .header-Tabs li span img {
 .body-login {
   left: 0;
   right: 0;
-
+  margin-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
   position: fixed;
