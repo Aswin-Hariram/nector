@@ -65,7 +65,7 @@ return (
                 <div className="d-flex mb-4" style={{ maxWidth: "300px" }}>
                   <MDBBtn className="px-3 me-2">
                     
-                  </MDBBtn>
+                  </MDBBtn >
 
                   <MDBInput defaultValue={1} min={0} type="number" label="Quantity" />
 
