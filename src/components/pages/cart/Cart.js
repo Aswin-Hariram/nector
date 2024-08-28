@@ -64,7 +64,7 @@ return (
               <MDBCol lg="4" md="6" className="mb-4 mb-lg-0">
                 <div className="d-flex mb-4" style={{ maxWidth: "300px" }}>
                   <MDBBtn className="px-3 me-2">
-                    <MDBIcon fas icon="minus" />
+                    
                   </MDBBtn>
 
                   <MDBInput defaultValue={1} min={0} type="number" label="Quantity" />
