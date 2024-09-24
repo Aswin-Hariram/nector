@@ -23,7 +23,7 @@ export default function Popular(){
             name:"Tata Tea Chakra Gold Premium Tea, 500 g",
             oldPrice:"Rs. 695.00",newPrice:"Rs.495.00"},
          {image:"https://www.bigbasket.com/media/uploads/p/m/1206632_4-paper-boat-apple-fruit-juice.jpg?tr=w-3840,q=80",
-            name:"Apple Juice - Rich In Vitamin D, No Added Preservatives",
+            name:"Apple Juice-Rich In Vitamin",
             oldPrice:"Rs.35.00",newPrice:"Rs.20.00"},
          {image:"https://www.bigbasket.com/media/uploads/p/l/1213178-2_1-paper-boat-swing-juicier-drink-slurpy-mango.jpg",
             name:"Paper Boat Swing Juicier Drink 50 ml",

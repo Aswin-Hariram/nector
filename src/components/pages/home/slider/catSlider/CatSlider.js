@@ -36,7 +36,7 @@ export default function CatSlider(){
     return (
         <div className="CatSliderSection">
             <div className='container-fluid'>
-                <h2 className='hd'>Featured Categories</h2>
+                <h2 className='hd'>Featured Items   </h2>
                 
                     <Slider {...settings} className="cat_slider_main" id="cat_slider_main">
                         {

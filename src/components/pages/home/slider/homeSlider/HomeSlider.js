@@ -8,28 +8,6 @@ import Button from '@mui/material/Button';
 
 export default function HomeSlider(){
     
-function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "red" }}
-        onClick={onClick}
-      />
-    );
-  }
-  
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "green" }}
-        onClick={onClick}
-      />
-    );
-  }
-  
     
   var settings  ={
         dots: true,
@@ -42,7 +20,7 @@ function SampleNextArrow(props) {
     }
   return (
     <div className="homeSlider">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+     
         <section className="container-fluid position-relative">
             <Slider {...settings} className="home_slider_main">
                 <div className="item">
