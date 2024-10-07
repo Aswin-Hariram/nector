@@ -1,10 +1,62 @@
-.gradient-custom {
-  /* fallback for old browsers */
+/* PaymentMethods.css */
+
+.payment-section {
+  padding: 20px;
+  background: #f8f9fa;
+}
+
+.payment-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.product-card {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.product-image {
+  width: 100px;
+  border-radius: 5px;
+}
+
+.product-details {
+  margin-left: 20px;
+  flex-grow: 1;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-controls button {
+  padding: 5px 10px;
+}
+
+.summary {
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.checkout-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
   background: #3bb77e;
-
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, #3bb77e #3bb77e);
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, #3bb77e, #3bb77e);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
