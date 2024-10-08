@@ -1,4 +1,4 @@
-.snooplay-login-container {
+.nector-login-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,7 @@
   height: 100%;
 }
 
-.snooplay-login-box {
+.nector-login-box {
   background-color: #fffefe;
   padding: 30px;
   border-radius: 10px;
@@ -15,7 +15,7 @@
   text-align: center;
 }
 
-.snooplay-login-box .close {
+.nector-login-box .close {
   display: flex;
   cursor: pointer;
   width: auto;
@@ -23,7 +23,7 @@
   justify-content: right;
 }
 
-.snooplay-logo img {
+.nector-logo img {
   width: auto;
   margin-bottom: 20px;
 }
@@ -84,7 +84,7 @@ hr {
   border: 1px solid #333;
   border-radius: 5px;
   background-color: #ffffff;
-  color: #adacac;
+  
   font-size: 14px;
 }
 
