@@ -15,13 +15,16 @@ export default function Deals(){
    return (
 
     <div className='homeProducts'> 
+       <center> <h1 className='title'>🔥 Trending Deals 🔥</h1></center>
         <div className="productRow">
            {
+
+                
                 data.length!==0&&data.map((item)=>{
                     return (
                         
                             <div className="item">
-                                
+                                    
                                  <Product data={item}/>
                              </div>
                         

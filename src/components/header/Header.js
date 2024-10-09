@@ -14,9 +14,12 @@ import Nav from "../nav/Nav";
 
 import { useState } from "react";
 import Login from "./Login";
+import { red } from "@mui/material/colors";
 export default function Header(){
 
     const [visible,setVisible] = useState(false);
+    const [status,setStatus] = useState();
+    
     
 
     return (
@@ -56,7 +59,18 @@ export default function Header(){
                         </li>
 
                          <li className="list-inline-item btn">
+                         {
+                            !status&&<div>
+                         
                             <Button onClick={()=>{setVisible(!visible)}} className="bg-g">Login/Signup</Button>
+                            </div>
+                         }
+                         {
+                            status&&<div>
+                         
+                            <Button onClick={()=>{localStorage.setItem("loginStatus",false); }} style={{background:'red'}}>Signout</Button>
+                            </div>
+                         }
                         </li>
                         
                         
@@ -68,7 +82,11 @@ export default function Header(){
                
             </div>
             <Nav/>
-             {visible && <div className="body-login"><Login data={visible} setVisible={setVisible}/></div>}
+             {visible && <div className="body-login">
+
+
+             <Login data={visible} setStatus={setStatus} setVisible={setVisible}/>
+             </div>}
         </header>
 
     );

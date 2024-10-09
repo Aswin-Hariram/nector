@@ -6,9 +6,14 @@
       "id": "0e34"
     },
     {
-      "id": "fdd0",
-      "email": "admin@gmail.com",
-      "password": "admin"
+      "id": "79f8",
+      "email": "admin123@gmail.com",
+      "password": "aswin123"
+    },
+    {
+      "id": "0e81",
+      "email": "aswinhariram@gmail.com",
+      "password": "Aswin123"
     }
   ],
   "products": [
@@ -16,7 +21,7 @@
       "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-5-1.jpg",
       "name": "Blue Diamond Almonds Lightly Salted Vegetables",
       "oldPrice": "Rs.250.8",
-      "newPrice": "Rs. 230.90",
+      "newPrice": "Rs. 240.90",
       "id": "342c"
     },
     {

@@ -6,25 +6,29 @@ import AppleIcon from '@mui/icons-material/Apple';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import GoogleIcon from '@mui/icons-material/Google';
 import axios from "axios";
-export default function Login({ visibile, setVisible }) {
+export default function Login({ visibile,setStatus, setVisible }) {
   const [element, setelement] = useState("Login");
   const [undo, setundo] = useState("false");
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const [cpass, setCpass] = useState('');
   const [data, setData] = useState([]);
-  const [dummy, setDummy] = useState([]);
-  function handleLogin(e) {
-    e.preventDefault();
+  const [message,setMessage] = useState('');
 
-    if (element === 'Login') {
+  
 
-      let l_email = email;
+  useEffect(()=>{
+    localStorage.setItem("loginStatus",false);
+    axios.get("http://localhost:8000/userDB")
+    .then(result => { setData(result.data); })
+    .catch(err => console.log(err));
+  },[]);
+
+  function Login(){
+    let l_email = email;
       let l_pass = pass;
       if (l_email.length !== 0 && l_pass !== 0) {
-        axios.get("http://localhost:8000/userDB")
-          .then(result => { setData(result.data); })
-          .catch(err => console.log(err));
+       
 
         if (data.length !== 0) {
           let found = false;
@@ -35,8 +39,14 @@ export default function Login({ visibile, setVisible }) {
                 console.log("Incorrect password");
               }
               else {
+
+                
+                localStorage.setItem("loginStatus",true);
+                console.log(localStorage.getItem("loginStatus"));
+
                 console.log("success...");
                 setVisible(false);
+                setStatus(true);
 
               }
             }
@@ -44,58 +54,51 @@ export default function Login({ visibile, setVisible }) {
           })
           if (!found) {
             console.log("User not found...");
+            setMessage("User not found...")
           }
         }
       }
 
+  }
+
+  function Signup(){
+    if (data.length !== 0) {
+     
+      const obj = data.find(item => item.email === email);
+      if (obj===undefined) {
+        axios.post("http://localhost:8000/userDB",
+          {
+            email:email,
+            password:pass
+          }
+        ).then((res)=>{
+          console.log(res);
+          console.log("Signup Successful..");
+          setVisible(false);
+        })
+        .catch((err)=>console.log(err));
+      }
+      else{
+        setMessage("User already exist...")
+        console.log("User already exist...");
+      }
+    }
+  }
+  function handleLogin(e) {
+    e.preventDefault();
+
+    if (element === 'Login') {
+
+      Login();
     }
     else {
 
-      let s_email = email;
-      let s_pass = pass;
-      let s_cpass = cpass;
-
-
-      if (s_email.length !== 0 && s_pass.length !== 0 && s_cpass.length) {
-        if (s_pass === s_cpass) {
-
-          axios.get("http://localhost:8000/userDB")
-            .then((res) => {
-              setDummy(res);
-              if (dummy.length !== 0) {
-                let found = false;
-                data.map((value) => {
-                  if (value.email === s_email) {
-                    found=true;
-
-
-                  }
-                  
-                })
-                if (!found) {
-                  
-                  axios.post("http://localhost:8000/userDB", {
-                    email: s_email,
-                    password: s_cpass
-                  })
-                    .then(res => {console.log("Signup successfull"); setVisible(false)})
-                    .catch(err => console.log(err));
-                }
-                else{
-                  console.log("User already exist");
-                }
-              }
-
-
-            })
-
-            .catch(err => console.log(err));
-
-        }
+      
+        Signup();
       }
 
 
-    }
+    
 
   }
 
@@ -160,6 +163,7 @@ export default function Login({ visibile, setVisible }) {
                   <label htmlFor="remember-me">Confirm your Details</label>
                 </div>}
               <button onClick={(e) => { handleLogin(e) }} className="login-btn">{element}</button>
+              <p className="error-message">{message}</p>
             </form>
             {element === "Login" ?
               <div className="forgot-password">
@@ -173,6 +177,7 @@ export default function Login({ visibile, setVisible }) {
               </div> : <div></div>}
           </div>
         </div> : <div></div>}
+       
     </div>
   );
 }
