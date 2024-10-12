@@ -4,8 +4,12 @@
   padding: 0px;
   box-sizing: border-box;
 }
+.cursor:hover{
+  color: #3bb77e;
+}
 .cursor {
   cursor: pointer;
+
 }
 .hd {
   font-size: 30px;

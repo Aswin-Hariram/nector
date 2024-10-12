@@ -1,81 +1,78 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import CartList from "./CartList";
 import './Cart.css';
 
-const products = [
-  {
-    id: 1,
-    name: "Blue denim shirt",
-    color: "blue",
-    size: "M",
-    price: 17.99,
-    image: "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-5-1.jpg",
-  },
-  {
-    id: 2,
-    name: "Red hoodie",
-    color: "red",
-    size: "M",
-    price: 17.99,
-    image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Vertical/13a.webp",
-  },
-];
+const Cart = () => {
+  const [cartItems, setCartItems] = useState([]);
+  const [totalAmount, setTotalAmount] = useState(0);
+  const email = localStorage.getItem("email");
 
-export default function Cart() {
-  const totalAmount = products.reduce((total, product) => total + product.price, 0);
+  const updateTotalAmount = () => {
+    const total = cartItems.reduce((acc, item) => {
+      return acc + (item.newPrice * item.quantity);
+    }, 0);
+    setTotalAmount(total);
+  };
+
+  const removeItem = (id) => {
+    setCartItems(prevItems => prevItems.filter(item => item.id !== id));
+  };
+
+  useEffect(() => {
+    axios.get(`http://localhost:8000/${email}`)
+      .then((response) => {
+        console.log(response.data);
+        setCartItems(response.data);
+      })
+      .catch(err => console.log(err));
+  }, [email]);
+
+  useEffect(() => {
+    updateTotalAmount(); // Recalculate total whenever cartItems changes
+  }, [cartItems]);
 
   return (
     <section className="payment-section">
       <div className="payment-container">
-        <h5>Cart - {products.length} items</h5>
-
-        {products.map((product) => (
-          <div key={product.id} className="product-card">
-
-            <img src={product.image} alt={product.name} className="product-image" />
-            <div className="product-details">
-              <p><strong>{product.name}</strong></p>
-              <p>Color: {product.color}</p>
-              <p>Size: {product.size}</p>
-              <div className="quantity-controls">
-                <button>-</button>
-                <input type="number" defaultValue={1} min={0} style={{ width: '50px', margin: '0 10px' }} />
-                <button>+</button>
+        <>
+          <h5 className="cart-title">Your Shopping Cart - {cartItems.length} items</h5>
+          {
+            cartItems.map((v, i) => (
+              <div key={i}>
+                <CartList data={v} updateTotalAmount={updateTotalAmount} removeItem={removeItem} setTotalAmount={setTotalAmount} totalAmount={totalAmount}/>
               </div>
-              <p style={{ textAlign: 'right' }}><strong>${product.price.toFixed(2)}</strong></p>
+            ))
+          }
+          <hr className="divider" />
+          <div className="shipping-info">
+            <strong>Expected shipping delivery:</strong>
+            <p>12.10.2024 - 14.10.2024</p>
+          </div>
+          <div className="payment-methods">
+            <strong>We accept:</strong>
+            <p>[Payment methods here]</p>
+          </div>
+          <div className="summary">
+            <h5>Order Summary</h5>
+            <div className="summary-item">
+              <span>Products</span>
+              <span>Rs. {totalAmount.toFixed(2)}</span>
             </div>
+            <div className="summary-item">
+              <span>Shipping</span>
+              <span>Blue Dart</span>
+            </div>
+            <div className="summary-item total">
+              <strong>Total amount (including GST)</strong>
+              <strong>Rs. {totalAmount.toFixed(2)}</strong>
+            </div>
+            <button className="checkout-button">Go to Checkout</button>
           </div>
-        ))}
-
-        <hr />
-        <div style={{ marginBottom: '20px' }}>
-          <strong>Expected shipping delivery:</strong>
-          <p>12.10.2020 - 14.10.2020</p>
-        </div>
-
-        <div style={{ marginBottom: '20px' }}>
-          <strong>We accept:</strong>
-          <p>[Payment methods here]</p>
-        </div>
-
-        <div className="summary">
-          <h5>Summary</h5>
-          <div className="summary-item">
-            <span>Products</span>
-            <span>${totalAmount.toFixed(2)}</span>
-          </div>
-          <div className="summary-item">
-            <span>Shipping</span>
-            <span>Gratis</span>
-          </div>
-          <div className="summary-item" style={{ borderTop: '1px solid #dee2e6', marginTop: '10px' }}>
-            <strong>Total amount (including VAT)</strong>
-            <strong>${totalAmount.toFixed(2)}</strong>
-          </div>
-          <button className="checkout-button">
-            Go to checkout
-          </button>
-        </div>
+        </>
       </div>
     </section>
   );
-}
+};
+
+export default Cart;

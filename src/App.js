@@ -7,13 +7,19 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Footer from './components/footer/Footer';
 import Deals from "./components/pages/home/Products/Deals";
 import Cart from "./components/pages/cart/Cart"
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function App() {
+ 
+  
   return (
-
+      
     <div>
+    
+  
       <BrowserRouter>
-          <Header/>
+          <Header />
        
 
           <Routes>

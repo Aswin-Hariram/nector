@@ -72,9 +72,22 @@
 .ProductThumb .button1 {
   color: #3bb77e;
   background-color: #bce3c9;
-  font-size: 22px;
+  font-size: 19px;
   padding: 5px 15px !important;
-  margin-left: 50px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+  position: absolute;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  text-transform: capitalize !important;
+}
+.ProductThumb .added {
+  color: #3bb77e;
+  background-color: #bce3c9;
+  font-size: 19px;
+  padding: 5px 15px !important;
+  margin-left: 10px;
   border: none;
   border-radius: 10px;
   position: absolute;

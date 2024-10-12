@@ -20,10 +20,10 @@ export default function Deals(){
            {
 
                 
-                data.length!==0&&data.map((item)=>{
+                data.length!==0&&data.map((item,index)=>{
                     return (
                         
-                            <div className="item">
+                            <div key={index} className="item">
                                     
                                  <Product data={item}/>
                              </div>

@@ -42,7 +42,7 @@ export default function CatSlider(){
                         {
                             itemBg.length!==0&&itemBg.map((item,index)=>{
                                 return (
-                                    <div className="item" >
+                                    <div key={index} className="item" >
                                         <div className="info" style={{background:item.color}}>
                                             <img src={item.image} alt="mango" />
                                             <h5>{item.name}</h5>

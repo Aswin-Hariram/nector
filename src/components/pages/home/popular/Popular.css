@@ -3,6 +3,9 @@
   position: relative;
   margin-bottom: 0px;
 }
+a:hover{
+  color: #3bb77e;
+}
 .homeProducts .list {
   position: absolute;
   right: 35px;

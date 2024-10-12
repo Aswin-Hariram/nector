@@ -41,11 +41,11 @@ export default function Popular(){
         </div>
         <div className="productRow">
            {
-                data.length!==0&&data.map((item)=>{
+                data.length!==0&&data.map((item,index)=>{
                     return (
                         
-                            <div className="item">
-                                    <Product data={item}/>
+                            <div key={index} className="item">
+                                    <Product key={index} data={item}/>
                                 
                              </div>
                         

@@ -1,90 +1,187 @@
 {
+  "admin123@gmail.com": [
+    {
+      "id": "342c",
+      "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-5-1.jpg",
+      "name": "Blue Diamond Almonds Lightly Salted",
+      "oldPrice": 250.8,
+      "newPrice": 240.9,
+      "quantity": 1
+    },
+    {
+      "id": "637d",
+      "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-7-1.jpg",
+      "name": "Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g",
+      "oldPrice": 250.8,
+      "newPrice": 230.85,
+      "quantity": 1
+    },
+    {
+      "id": "5a6c",
+      "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-2-1.jpg",
+      "name": "All Natural Italian-Style Cashew Mix",
+      "oldPrice": 550.8,
+      "newPrice": 520.85,
+      "quantity": 1
+    },
+    {
+      "id": "1d9c",
+      "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-1-1.jpg",
+      "name": "Instant Herbal Bevarage with Dandelion",
+      "oldPrice": 3500,
+      "newPrice": 32.8,
+      "quantity": 1
+    },
+    {
+      "id": "816e",
+      "image": "https://www.bigbasket.com/media/uploads/p/m/240067_23-tata-tea-gold-tea.jpg?tr=w-3840,q=80",
+      "name": "Tata Tea Gold Assam Teas, 500 g",
+      "oldPrice": 1850,
+      "newPrice": 1498.5,
+      "quantity": 1
+    }
+  ],
+  "cart": [
+    {
+      "id": "034e",
+      "email": "admin123@gmail.com",
+      "item": {
+        "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-5-1.jpg",
+        "name": "Blue Diamond Almonds Lightly Salted",
+        "oldPrice": 250.8,
+        "newPrice": 240.9,
+        "quantity": 1
+      }
+    },
+    {
+      "id": "0e6b",
+      "email": "admin123@gmail.com",
+      "item": {
+        "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-7-1.jpg",
+        "name": "Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g",
+        "oldPrice": 250.8,
+        "newPrice": 230.85,
+        "quantity": 1
+      }
+    },
+    {
+      "id": "6b5e",
+      "email": "admin123@gmail.com",
+      "item": {
+        "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-2-1.jpg",
+        "name": "All Natural Italian-Style Cashew Mix",
+        "oldPrice": 550.8,
+        "newPrice": 520.85,
+        "quantity": 1
+      }
+    }
+  ],
   "userDB": [
     {
-      "email": "admin@gmail.com",
-      "password": "admin",
-      "id": "0e34"
-    },
-    {
-      "id": "79f8",
+      "id": "7bb1",
       "email": "admin123@gmail.com",
-      "password": "aswin123"
+      "password": "Admin123@",
+      "cart": [
+        {
+          "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-5-1.jpg",
+          "name": "Blue Diamond Almonds Lightly Salted Vegetables",
+          "oldPrice": 250.8,
+          "newPrice": 240.9,
+          "id": "342c"
+        }
+      ]
     },
     {
-      "id": "0e81",
-      "email": "aswinhariram@gmail.com",
-      "password": "Aswin123"
+      "id": "7bb2",
+      "email": "admin1234@gmail.com",
+      "password": "Admin123@",
+      "cart": [
+        {
+          "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-5-1.jpg",
+          "name": "Blue Diamond Almonds Lightly Salted Vegetables",
+          "oldPrice": 250.8,
+          "newPrice": 240.9,
+          "id": "342c"
+        }
+      ]
     }
   ],
   "products": [
     {
       "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-5-1.jpg",
-      "name": "Blue Diamond Almonds Lightly Salted Vegetables",
-      "oldPrice": "Rs.250.8",
-      "newPrice": "Rs. 240.90",
+      "name": "Blue Diamond Almonds Lightly Salted",
+      "oldPrice": 250.8,
+      "newPrice": 240.9,
       "id": "342c"
     },
     {
       "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-7-1.jpg",
       "name": "Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g",
-      "oldPrice": "Rs.250.8",
-      "newPrice": "Rs. 230.85",
+      "oldPrice": 250.8,
+      "newPrice": 230.85,
       "id": "637d"
     },
     {
       "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-2-1.jpg",
       "name": "All Natural Italian-Style Cashew Mix",
-      "oldPrice": "Rs. 550.8",
-      "newPrice": "Rs. 520.85",
+      "oldPrice": 550.8,
+      "newPrice": 520.85,
       "id": "5a6c"
     },
     {
       "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-1-1.jpg",
       "name": "Instant Herbal Bevarage with Dandelion",
-      "oldPrice": "Rs. 3,500.00",
-      "newPrice": "Rs. 32.8",
+      "oldPrice": 3500,
+      "newPrice": 32.8,
       "id": "1d9c"
     },
     {
       "image": "https://www.bigbasket.com/media/uploads/p/m/240067_23-tata-tea-gold-tea.jpg?tr=w-3840,q=80",
       "name": "Tata Tea Gold Assam Teas, 500 g",
-      "oldPrice": "Rs. 1,850.00",
-      "newPrice": "Rs. 1,498.50",
+      "oldPrice": 1850,
+      "newPrice": 1498.5,
       "id": "816e"
     },
     {
       "image": "https://www.bigbasket.com/media/uploads/p/m/297576_17-tata-tea-chakra-gold-dust-tea.jpg?tr=w-640,q=80",
       "name": "Tata Tea Chakra Gold Premium Tea, 500 g",
-      "oldPrice": "Rs. 695.00",
-      "newPrice": "Rs.495.00",
+      "oldPrice": 695,
+      "newPrice": 495,
       "id": "6b52"
     },
     {
       "image": "https://www.bigbasket.com/media/uploads/p/m/1206632_4-paper-boat-apple-fruit-juice.jpg?tr=w-3840,q=80",
       "name": "Apple Juice-Rich In Vitamin",
-      "oldPrice": "Rs.35.00",
-      "newPrice": "Rs.20.00",
+      "oldPrice": 35,
+      "newPrice": 20,
       "id": "b734"
     },
     {
       "image": "https://www.bigbasket.com/media/uploads/p/l/1213178-2_1-paper-boat-swing-juicier-drink-slurpy-mango.jpg",
       "name": "Paper Boat Swing Juicier Drink 50 ml",
-      "oldPrice": "Rs. 75",
-      "newPrice": "Rs. 60",
+      "oldPrice": 75,
+      "newPrice": 60,
       "id": "4b07"
     },
     {
       "image": "https://www.bigbasket.com/media/uploads/p/m/40038381_6-fresho-farm-eggs-brown-medium-antibiotic-residue-free.jpg?tr=w-1920,q=80",
       "name": "Farm Eggs - Brown, Medium 10 pcs",
-      "oldPrice": "Rs.200",
-      "newPrice": "Rs.180.00",
+      "oldPrice": 200,
+      "newPrice": 180,
       "id": "bb3e"
     },
     {
       "image": "https://www.bigbasket.com/media/uploads/p/m/40161155_3-farm-made-free-range-eggs.jpg?tr=w-1920,q=80",
       "name": "UPF Healthy Brown Eggs - Large, Rich 30 pcs",
-      "oldPrice": "Rs. 150.00",
-      "newPrice": "Rs. 100.00",
+      "oldPrice": 150,
+      "newPrice": 100,
+      "id": "17e8"
+    },
+    {
+      "image": "https://www.bigbasket.com/media/uploads/p/m/1218999_2-cadbury-dairy-milk-silk-chocolate-bar.jpg?tr=w-640,q=80",
+      "name": "Dairy Milk Chocolate - pack of 2",
+      "oldPrice": 150,
+      "newPrice": 100,
       "id": "17e8"
     }
   ]

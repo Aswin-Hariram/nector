@@ -8,3 +8,4 @@ npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
 npm install --save react-modal
 npm i mdb-react-ui-kit
 npm i react-cookie
+npm i axios

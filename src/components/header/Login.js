@@ -6,81 +6,134 @@ import AppleIcon from '@mui/icons-material/Apple';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import GoogleIcon from '@mui/icons-material/Google';
 import axios from "axios";
-export default function Login({ visibile,setStatus, setVisible }) {
+export default function Login({ visibile, setStatus, setVisible }) {
   const [element, setelement] = useState("Login");
   const [undo, setundo] = useState("false");
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const [cpass, setCpass] = useState('');
   const [data, setData] = useState([]);
-  const [message,setMessage] = useState('');
+  const [message, setMessage] = useState('');
+  var email_regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+  let pass_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-  
 
-  useEffect(()=>{
-    localStorage.setItem("loginStatus",false);
+  useEffect(() => {
+
     axios.get("http://localhost:8000/userDB")
-    .then(result => { setData(result.data); })
-    .catch(err => console.log(err));
-  },[]);
+      .then(result => { setData(result.data); })
+      .catch(err => console.log(err));
+  }, []);
 
-  function Login(){
+  function Valid(){
+    if(!email.match(email_regex)){
+      setMessage("Enter valid Email Address....");
+      return false;
+    }
+    else if(!pass.match(pass_regex)){
+      setMessage("Enter Strong Password...");
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+
+  function Login() {
     let l_email = email;
-      let l_pass = pass;
-      if (l_email.length !== 0 && l_pass !== 0) {
-       
+    let l_pass = pass;
+    if (l_email.length !== 0 && l_pass !== 0&&Valid() ) {
 
-        if (data.length !== 0) {
-          let found = false;
-          data.map((value) => {
-            if (value.email === l_email) {
-              found = true;
-              if (value.password !== l_pass) {
-                console.log("Incorrect password");
-              }
-              else {
 
-                
-                localStorage.setItem("loginStatus",true);
-                console.log(localStorage.getItem("loginStatus"));
-
-                console.log("success...");
-                setVisible(false);
-                setStatus(true);
-
-              }
+      if (data.length !== 0) {
+        let found = false;
+        data.map((value) => {
+          
+          if (value.email === l_email) {
+            found = true;
+            if (value.password !== l_pass) {
+              setMessage("Incorrect password");
             }
-            
-          })
-          if (!found) {
-            console.log("User not found...");
-            setMessage("User not found...")
+            else {
+
+
+              localStorage.setItem("loginStatus", "true");
+              localStorage.setItem("email", email);
+              console.log(localStorage.getItem("loginStatus"));
+
+              console.log("success...");
+              setVisible(false);
+              setStatus("true");
+
+            }
           }
+
+        })
+        if (!found) {
+          console.log("User not found...");
+          setMessage("User not found...")
         }
       }
+    }
 
   }
 
-  function Signup(){
+  function Signup() {
     if (data.length !== 0) {
-     
+
       const obj = data.find(item => item.email === email);
-      if (obj===undefined) {
-        axios.post("http://localhost:8000/userDB",
-          {
-            email:email,
-            password:pass
+      if (obj === undefined) {
+        if (email.length !== 0 && pass.length !== 0 && cpass.length !== 0 && pass === cpass) {
+          if(Valid()){
+            axios.post("http://localhost:8000/userDB",
+              {
+                email: email,
+                password: pass,
+                cart: []
+              }
+            ).then((res) => {
+              localStorage.setItem("loginStatus", "true");
+              localStorage.setItem("email", email);
+              console.log(localStorage.getItem("loginStatus"));
+              console.log(res);
+              console.log("Signup Successful..");
+              setVisible(false);
+              setStatus("true");
+  
+            })
+              .catch((err) => console.log(err));
           }
-        ).then((res)=>{
-          console.log(res);
-          console.log("Signup Successful..");
-          setVisible(false);
-        })
-        .catch((err)=>console.log(err));
+        }
+        else{
+          alert("Input field cannot be empty!!!");
+        }
       }
-      else{
+      else {
         setMessage("User already exist...")
         console.log("User already exist...");
+      }
+    }
+    else{
+      if (email.length !== 0 && pass.length !== 0 && cpass.length !== 0 && pass === cpass) {
+        if(Valid()){
+          axios.post("http://localhost:8000/userDB",
+            {
+              email: email,
+              password: pass,
+              cart: []
+            }
+          ).then((res) => {
+            localStorage.setItem("loginStatus", "true");
+            localStorage.setItem("email", email);
+            console.log(localStorage.getItem("loginStatus"));
+            console.log(res);
+            console.log("Signup Successful..");
+            setVisible(false);
+            setStatus("true");
+
+          })
+            .catch((err) => console.log(err));
+        }
       }
     }
   }
@@ -93,12 +146,12 @@ export default function Login({ visibile,setStatus, setVisible }) {
     }
     else {
 
-      
-        Signup();
-      }
+
+      Signup();
+    }
 
 
-    
+
 
   }
 
@@ -177,7 +230,7 @@ export default function Login({ visibile,setStatus, setVisible }) {
               </div> : <div></div>}
           </div>
         </div> : <div></div>}
-       
+
     </div>
   );
 }
