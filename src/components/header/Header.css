@@ -102,7 +102,8 @@ header {
   border-radius: 5px;                  /* Rounded corners */
   font-weight: 500;                    /* Slightly bold font */
   cursor: pointer;                     /* Pointer on hover */
-}
+} 
+
 
 /* Add hover effects */
 .login-btn:hover, .signout-btn:hover {
