@@ -1,132 +1,161 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 header {
   width: 100%;
+  background-color: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  max-width: 130px;
   height: auto;
-  margin: auto;
-  position: relative;
-  padding: 15px 0px;
-}
-body {
-  font-family: "Roboto";
 }
 
-.row .srow {
-  padding: 15px;
+.header-search {
   display: flex;
-  justify-items: center;
-  align-items: center;
-}
-img {
-  height: 100px;
-  width: 100px;
-  align-self: center;
-}
-header .headerSearch {
-  width: 80%;
-  height: 50px;
-  padding: 15px;
+  gap: 10px;
+  padding: 10px;
   border: 1px solid #bce3c9;
-  cursor: pointer;
+  border-radius: 5px;
+  background-color: #ffff;
 }
-header .headerSearch .selectDrop {
-  width: 150px;
-  font-size: 16px;
-  font-weight: 500;
+
+.search {
+  flex-grow: 1;
   position: relative;
 }
-header .headerSearch .selectDrop:after {
-  content: " ";
-  width: 1px;
-  height: 30px;
-  background: rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 5px;
-  right: 0px;
-}
-header .headerSearch .search {
-  width: 85%;
-  padding-left: 30px;
-  position: relative;
-}
-header .headerSearch .search input {
+
+.search input {
   width: 100%;
-  border: 0px;
-  outline: 0px !important;
-  height: 50%;
+  border: none;
+  outline: none;
+  padding: 8px 10px;
+  font-size: 14px;
 }
-header .headerSearch .search .searchIcon {
+
+.search-icon {
   position: absolute;
-  top: 3px;
-  right: 7px;
-  opacity: 0.5;
-  font-size: 25px !important;
-}
-
-header .list .list-inline-item .compare {
-  height: 40px;
-  width: 40px;
-  margin-right: 10px;
-}
-header .list .list-inline-item .whish {
-  height: 30px;
-  width: 30px;
-  margin-right: 18px;
-}
-header .list .list-inline-item .cart {
-  height: 30px;
-  width: 30px;
-  margin-right: 20px;
-}
-
-header .header-Tabs {
-  padding-left: 40px;
-}
-header .header-Tabs li {
-  position: relative;
-  left: 80px;
-}
-header .header-Tabs li .badge {
-  font-size: 20px;
-
-  background-color: #bce3c9;
-  top: -20px;
-  width: 30px;
-  display: flex;
-  justify-content: center;
-  height: 30px;
-  border-radius: 50%;
-  left: 25px;
-  color: #ffff;
-  font-weight: 200;
-
-  position: absolute;
-}
-header .header-Tabs li .cart{
-  color: black;
-}
-header .header-Tabs li .cart:hover{
-  color: #3bb77e
-}
-header .header-Tabs li button {
-  color: white;
-  display: flex;
-  justify-content: center;
-  border: 0px !important;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
-  align-items: center;
+  font-size: 20px;
 }
 
-header .header-Tabs li span img {
-  margin-right: 150px;
+.header-tabs {
+  display: flex;
+  gap: 15px;
+}
+
+.header-tabs .list-inline-item {
+  position: relative;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.header-tabs .icon {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.header-tabs .badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #3bb77e;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* Login/Signup Button Styles */
+.login-btn {
+  background-color: #3bb77e !important; /* Ensure the background is green */
+  color: white !important;            /* White text */
+  border: none;                       /* Remove any border */
+  padding: 8px 15px;                  /* Add padding for better UX */
+  border-radius: 5px;                 /* Rounded corners */
+  font-weight: 500;                   /* Slightly bold font */
+  cursor: pointer;                    /* Pointer on hover */
+}
+
+/* Sign Out Button Styles */
+.signout-btn {
+  background-color: #ff4c4c !important; /* Use a clear red color */
+  color: white !important;             /* White text */
+  border: none;                        /* Remove any border */
+  padding: 8px 15px;                   /* Add padding for better UX */
+  border-radius: 5px;                  /* Rounded corners */
+  font-weight: 500;                    /* Slightly bold font */
+  cursor: pointer;                     /* Pointer on hover */
+}
+
+/* Add hover effects */
+.login-btn:hover, .signout-btn:hover {
+  opacity: 0.9; /* Slightly dim the button on hover */
+}
+
+/* Ensure styles are not overridden by external libraries */
+button.login-btn, button.signout-btn {
+  all: unset; /* Remove all default browser styles */
+  display: inline-block; /* Ensure proper button rendering */
+  text-align: center;    /* Center-align text */
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .body-login {
-  left: 0;
-  right: 0;
-  margin-bottom: 100px;
-  margin-left: auto;
-  margin-right: auto;
   position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
-  top: 3%;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 80px;
+  }
+
+  .header-search {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .search input {
+    font-size: 12px;
+  }
+
+  .header-tabs {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .icon {
+    font-size: 40px;
+  }
+
+  .Link{
+    text-decoration: none;
+  }
 }

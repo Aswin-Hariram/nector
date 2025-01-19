@@ -8,7 +8,7 @@ export default function Deals(){
 
     const [data,setData] = useState([]);
     useEffect(()=>{
-        axios.get("http://localhost:8000/products")
+        axios.get("https://json-server-sik9.onrender.com/products")
         .then(res=>{console.log(setData(res.data))})
         .catch(err=>{console.log(err)});
     },[]);

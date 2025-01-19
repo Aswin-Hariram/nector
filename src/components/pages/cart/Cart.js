@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import CartList from "./CartList";
 import './Cart.css';
+import { Context } from "../../../App.js";
 
 const Cart = () => {
+  const [cartCount, setCartCount] = useContext(Context);
   const [cartItems, setCartItems] = useState([]);
   const [totalAmount, setTotalAmount] = useState(0);
   const email = localStorage.getItem("email");
 
+  // Function to update the total amount whenever cart items change
   const updateTotalAmount = () => {
     const total = cartItems.reduce((acc, item) => {
       return acc + (item.newPrice * item.quantity);
@@ -15,21 +18,39 @@ const Cart = () => {
     setTotalAmount(total);
   };
 
+  // Function to remove an item from the cart
   const removeItem = (id) => {
-    setCartItems(prevItems => prevItems.filter(item => item.id !== id));
+    setCartItems(prevItems => {
+      const updatedItems = prevItems.filter(item => item.id !== id);
+      // Update the backend with the modified cart
+      axios.put(`https://json-server-sik9.onrender.com/userDB/${email}`, {
+        ...prevItems,
+        cart: updatedItems
+      })
+        .then(() => {
+          console.log("Item removed from cart.");
+          updateTotalAmount(); // Recalculate total after removal
+        })
+        .catch(err => console.log(err));
+      return updatedItems;
+    });
   };
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/${email}`)
+    // Fetch the user's cart from the backend
+    axios.get(`https://json-server-sik9.onrender.com/userDB`)
       .then((response) => {
-        console.log(response.data);
-        setCartItems(response.data);
+        const user = response.data.find(user => user.email === email);
+        if (user) {
+          setCartItems(user.cart); // Set the cart items in the state
+          setCartCount(user.cart.length); // Update the cart count
+        }
       })
       .catch(err => console.log(err));
   }, [email]);
 
   useEffect(() => {
-    updateTotalAmount(); // Recalculate total whenever cartItems changes
+    updateTotalAmount(); // Recalculate total whenever cartItems change
   }, [cartItems]);
 
   return (
@@ -37,10 +58,17 @@ const Cart = () => {
       <div className="payment-container">
         <>
           <h5 className="cart-title">Your Shopping Cart - {cartItems.length} items</h5>
+          {setCartCount(cartItems.length)} {/* This will update the cart count */}
           {
-            cartItems.map((v, i) => (
-              <div key={i}>
-                <CartList data={v} updateTotalAmount={updateTotalAmount} removeItem={removeItem} setTotalAmount={setTotalAmount} totalAmount={totalAmount}/>
+            cartItems.map((item, index) => (
+              <div key={index}>
+                <CartList
+                  data={item}
+                  updateTotalAmount={updateTotalAmount}
+                  removeItem={removeItem}
+                  setTotalAmount={setTotalAmount}
+                  totalAmount={totalAmount}
+                />
               </div>
             ))
           }

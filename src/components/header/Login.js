@@ -14,27 +14,27 @@ export default function Login({ visibile, setStatus, setVisible }) {
   const [cpass, setCpass] = useState('');
   const [data, setData] = useState([]);
   const [message, setMessage] = useState('');
-  var email_regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+  var email_regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   let pass_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
 
   useEffect(() => {
 
-    axios.get("http://localhost:8000/userDB")
+    axios.get("https://json-server-sik9.onrender.com/userDB")
       .then(result => { setData(result.data); })
       .catch(err => console.log(err));
   }, []);
 
-  function Valid(){
-    if(!email.match(email_regex)){
+  function Valid() {
+    if (!email.match(email_regex)) {
       setMessage("Enter valid Email Address....");
       return false;
     }
-    else if(!pass.match(pass_regex)){
+    else if (!pass.match(pass_regex)) {
       setMessage("Enter Strong Password...");
       return false;
     }
-    else{
+    else {
       return true;
     }
   }
@@ -42,13 +42,13 @@ export default function Login({ visibile, setStatus, setVisible }) {
   function Login() {
     let l_email = email;
     let l_pass = pass;
-    if (l_email.length !== 0 && l_pass !== 0&&Valid() ) {
+    if (l_email.length !== 0 && l_pass !== 0 && Valid()) {
 
 
       if (data.length !== 0) {
         let found = false;
         data.map((value) => {
-          
+
           if (value.email === l_email) {
             found = true;
             if (value.password !== l_pass) {
@@ -60,7 +60,8 @@ export default function Login({ visibile, setStatus, setVisible }) {
               localStorage.setItem("loginStatus", "true");
               localStorage.setItem("email", email);
               console.log(localStorage.getItem("loginStatus"));
-
+              window.location.reload();
+              window.location.replace("/");
               console.log("success...");
               setVisible(false);
               setStatus("true");
@@ -84,8 +85,8 @@ export default function Login({ visibile, setStatus, setVisible }) {
       const obj = data.find(item => item.email === email);
       if (obj === undefined) {
         if (email.length !== 0 && pass.length !== 0 && cpass.length !== 0 && pass === cpass) {
-          if(Valid()){
-            axios.post("http://localhost:8000/userDB",
+          if (Valid()) {
+            axios.post("https://json-server-sik9.onrender.com/userDB",
               {
                 email: email,
                 password: pass,
@@ -96,15 +97,18 @@ export default function Login({ visibile, setStatus, setVisible }) {
               localStorage.setItem("email", email);
               console.log(localStorage.getItem("loginStatus"));
               console.log(res);
+
               console.log("Signup Successful..");
+              window.location.reload();
+              window.location.replace("/");
               setVisible(false);
               setStatus("true");
-  
+
             })
               .catch((err) => console.log(err));
           }
         }
-        else{
+        else {
           alert("Input field cannot be empty!!!");
         }
       }
@@ -113,10 +117,10 @@ export default function Login({ visibile, setStatus, setVisible }) {
         console.log("User already exist...");
       }
     }
-    else{
+    else {
       if (email.length !== 0 && pass.length !== 0 && cpass.length !== 0 && pass === cpass) {
-        if(Valid()){
-          axios.post("http://localhost:8000/userDB",
+        if (Valid()) {
+          axios.post("https://json-server-sik9.onrender.com/userDB",
             {
               email: email,
               password: pass,
@@ -128,6 +132,9 @@ export default function Login({ visibile, setStatus, setVisible }) {
             console.log(localStorage.getItem("loginStatus"));
             console.log(res);
             console.log("Signup Successful..");
+            window.location.reload();
+            window.location.replace("/");
+
             setVisible(false);
             setStatus("true");
 

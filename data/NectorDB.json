@@ -1,109 +1,56 @@
 {
-  "admin123@gmail.com": [
-    {
-      "id": "342c",
-      "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-5-1.jpg",
-      "name": "Blue Diamond Almonds Lightly Salted",
-      "oldPrice": 250.8,
-      "newPrice": 240.9,
-      "quantity": 1
-    },
-    {
-      "id": "637d",
-      "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-7-1.jpg",
-      "name": "Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g",
-      "oldPrice": 250.8,
-      "newPrice": 230.85,
-      "quantity": 1
-    },
-    {
-      "id": "5a6c",
-      "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-2-1.jpg",
-      "name": "All Natural Italian-Style Cashew Mix",
-      "oldPrice": 550.8,
-      "newPrice": 520.85,
-      "quantity": 1
-    },
-    {
-      "id": "1d9c",
-      "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-1-1.jpg",
-      "name": "Instant Herbal Bevarage with Dandelion",
-      "oldPrice": 3500,
-      "newPrice": 32.8,
-      "quantity": 1
-    },
-    {
-      "id": "816e",
-      "image": "https://www.bigbasket.com/media/uploads/p/m/240067_23-tata-tea-gold-tea.jpg?tr=w-3840,q=80",
-      "name": "Tata Tea Gold Assam Teas, 500 g",
-      "oldPrice": 1850,
-      "newPrice": 1498.5,
-      "quantity": 1
-    }
-  ],
-  "cart": [
-    {
-      "id": "034e",
-      "email": "admin123@gmail.com",
-      "item": {
-        "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-5-1.jpg",
-        "name": "Blue Diamond Almonds Lightly Salted",
-        "oldPrice": 250.8,
-        "newPrice": 240.9,
-        "quantity": 1
-      }
-    },
-    {
-      "id": "0e6b",
-      "email": "admin123@gmail.com",
-      "item": {
-        "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-7-1.jpg",
-        "name": "Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g",
-        "oldPrice": 250.8,
-        "newPrice": 230.85,
-        "quantity": 1
-      }
-    },
-    {
-      "id": "6b5e",
-      "email": "admin123@gmail.com",
-      "item": {
-        "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-2-1.jpg",
-        "name": "All Natural Italian-Style Cashew Mix",
-        "oldPrice": 550.8,
-        "newPrice": 520.85,
-        "quantity": 1
-      }
-    }
-  ],
   "userDB": [
     {
-      "id": "7bb1",
-      "email": "admin123@gmail.com",
-      "password": "Admin123@",
+      "id": "e7aa",
+      "email": "aswinhariram8055@gmail.com",
+      "password": "Aswin8055@@",
       "cart": [
         {
+          "id": "637d",
+          "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-7-1.jpg",
+          "name": "Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g",
+          "oldPrice": 250.8,
+          "newPrice": 230.85,
+          "quantity": 1
+        },
+        {
+          "id": "b734",
+          "image": "https://www.bigbasket.com/media/uploads/p/m/1206632_4-paper-boat-apple-fruit-juice.jpg?tr=w-3840,q=80",
+          "name": "Apple Juice-Rich In Vitamin",
+          "oldPrice": 35,
+          "newPrice": 20,
+          "quantity": 3
+        },
+        {
+          "id": "342c",
           "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-5-1.jpg",
-          "name": "Blue Diamond Almonds Lightly Salted Vegetables",
+          "name": "Blue Diamond Almonds Lightly Salted",
           "oldPrice": 250.8,
           "newPrice": 240.9,
-          "id": "342c"
+          "quantity": 1
         }
       ]
     },
     {
-      "id": "7bb2",
-      "email": "admin1234@gmail.com",
-      "password": "Admin123@",
+      "id": "d199",
+      "email": "727823tucs203@gmail.com",
+      "password": "Aswin8055@@",
       "cart": [
         {
+          "id": "342c",
           "image": "https://wp.alithemes.com/html/nest/demo/assets/imgs/shop/product-5-1.jpg",
-          "name": "Blue Diamond Almonds Lightly Salted Vegetables",
+          "name": "Blue Diamond Almonds Lightly Salted",
           "oldPrice": 250.8,
           "newPrice": 240.9,
-          "id": "342c"
+          "quantity": 1
         }
       ]
+    },
+    {
+      "id": "58cf",
+      "email": "arun@gmail.com",
+      "password": "Aswin8055@@",
+      "cart": []
     }
   ],
   "products": [

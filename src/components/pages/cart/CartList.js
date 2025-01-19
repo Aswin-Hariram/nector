@@ -1,64 +1,73 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./CartList.css";
 
-export default function CartList({ data, updateTotalAmount, removeItem,setTotalAmount,totalAmount }) {
+export default function CartList({ data, updateTotalAmount, removeItem, setTotalAmount, totalAmount }) {
     const [quantity, setQuantity] = useState(data.quantity);
-    const [curTotal,setCurTotal] = useState(data.quantity*data.newPrice);
-    const email = localStorage.getItem("email");
+    const [curTotal, setCurTotal] = useState(data.quantity * data.newPrice);
+    const email = localStorage.getItem("email"); // Assuming email is unique per user
 
+    useEffect(() => {
+        setCurTotal(quantity * data.newPrice); // Recalculate current total when quantity changes
+    }, [quantity, data.newPrice]);
+
+    // Helper function to update user cart
+    const updateCart = (newQuantity) => {
+        axios
+            .get(`https://json-server-sik9.onrender.com/userDB?email=${email}`) // Fetch the user object by email
+            .then((res) => {
+                const user = res.data[0]; // Assuming unique email
+                const updatedCart = user.cart.map((item) =>
+                    item.id === data.id ? { ...item, quantity: newQuantity } : item
+                );
+
+                // Update user cart on the server
+                return axios.put(`https://json-server-sik9.onrender.com/userDB/${user.id}`, {
+                    ...user,
+                    cart: updatedCart,
+                });
+            })
+            .then((res) => {
+                console.log("Cart updated successfully:", res.data);
+            })
+            .catch((err) => console.error("Error updating cart:", err));
+    };
+
+    // Handle increasing quantity
     const handlePlus = () => {
         const newQuantity = quantity + 1;
         setQuantity(newQuantity);
-
-        const itemData = {
-            id: data.id,
-            image: data.image,
-            name: data.name,
-            oldPrice: data.oldPrice,
-            newPrice: data.newPrice,
-            quantity: newQuantity,
-        };
-
-        axios.put(`http://localhost:8000/${email}/${data.id}`, itemData)
-            .then((res) => {
-                console.log("Item updated successfully:", res.data.newPrice);
-                setTotalAmount(totalAmount+res.data.newPrice); 
-                setCurTotal(res.data.quantity*res.data.newPrice);
-            })
-            .catch(err => console.log("Error updating item:", err));
+        updateCart(newQuantity);
+        setTotalAmount(totalAmount + data.newPrice); // Update total amount in parent
     };
 
+    // Handle decreasing quantity
     const handleMinus = () => {
         if (quantity > 1) {
             const newQuantity = quantity - 1;
             setQuantity(newQuantity);
-
-            const itemData = {
-                id: data.id,
-                image: data.image,
-                name: data.name,
-                oldPrice: data.oldPrice,
-                newPrice: data.newPrice,
-                quantity: newQuantity,
-            };
-
-            axios.put(`http://localhost:8000/${email}/${data.id}`, itemData)
-                .then((res) => {
-                    console.log("Item updated successfully:", res);
-                    setTotalAmount(totalAmount-res.data.newPrice); 
-                    setCurTotal(res.data.quantity*res.data.newPrice);
-                })
-                .catch(err => console.log("Error updating item:", err));
+            updateCart(newQuantity);
+            setTotalAmount(totalAmount - data.newPrice); // Update total amount in parent
         } else if (quantity === 1) {
-            axios.delete(`http://localhost:8000/${email}/${data.id}`)
+            // Remove item from the cart
+            axios
+                .get(`https://json-server-sik9.onrender.com/userDB?email=${email}`) // Fetch the user object by email
                 .then((res) => {
-                    console.log("Item removed from cart successfully:", res);
-                    removeItem(data.id); 
-                    
-                    
+                    const user = res.data[0]; // Assuming unique email
+                    const updatedCart = user.cart.filter((item) => item.id !== data.id);
+
+                    // Update user cart on the server
+                    return axios.put(`https://json-server-sik9.onrender.com/userDB/${user.id}`, {
+                        ...user,
+                        cart: updatedCart,
+                    });
                 })
-                .catch(err => console.log("Error removing item:", err));
+                .then((res) => {
+                    console.log("Item removed successfully:", res.data);
+                    removeItem(data.id); // Remove item from local state
+                    setTotalAmount(totalAmount - curTotal); // Update total amount in parent
+                })
+                .catch((err) => console.error("Error removing item:", err));
         }
     };
 

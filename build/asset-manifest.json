@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.53f94696.css",
+    "main.js": "/static/js/main.f8ea8acd.js",
+    "static/js/453.07322c4a.chunk.js": "/static/js/453.07322c4a.chunk.js",
+    "static/media/logo.png": "/static/media/logo.0d798bc7426ce9fe8193.png",
+    "static/media/banner1.png": "/static/media/banner1.1459cb0c6ae61ace70e5.png",
+    "static/media/banner2.png": "/static/media/banner2.5aee308dcc07c4bd0be9.png",
+    "static/media/item2.png": "/static/media/item2.56ec35423181db555ada.png",
+    "static/media/banner5.png": "/static/media/banner5.566f11e2c61f220c19c7.png",
+    "static/media/banner3.png": "/static/media/banner3.786016c2b035ac64a0bd.png",
+    "static/media/banner4.png": "/static/media/banner4.3eedebabb43c041ea9ce.png",
+    "static/media/googleplay.png": "/static/media/googleplay.df2738985a182a1c43e3.png",
+    "static/media/item4.png": "/static/media/item4.465d595bcb0e984160bc.png",
+    "static/media/item1.png": "/static/media/item1.04362c544fdb54a37718.png",
+    "static/media/applestore.png": "/static/media/applestore.1a0cf66b5c3d4eeb371a.png",
+    "static/media/fbanner1.png": "/static/media/fbanner1.e81d2ffa02fa4aa5be01.png",
+    "static/media/fbanner2.png": "/static/media/fbanner2.7d98cad093f42a2cd630.png",
+    "static/media/fbanner4.png": "/static/media/fbanner4.5bfe07c4416b7aaf11d5.png",
+    "static/media/fbanner3.png": "/static/media/fbanner3.956541032503d0c05588.png",
+    "index.html": "/index.html",
+    "main.53f94696.css.map": "/static/css/main.53f94696.css.map",
+    "main.f8ea8acd.js.map": "/static/js/main.f8ea8acd.js.map",
+    "453.07322c4a.chunk.js.map": "/static/js/453.07322c4a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53f94696.css",
+    "static/js/main.f8ea8acd.js"
+  ]
+}

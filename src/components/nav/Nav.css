@@ -1,49 +1,93 @@
-.nav{
+.nav {
     width: 100%;
     height: 70px;
     margin: auto;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ffff;
 }
-.nav .row{
+
+.nav .row {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.nav .catTab{
-    padding: 8px 20px !important;
-    font-size: 20px !important;
-    text-transform: capitalize !important;
-}
 
-.nav nav ul li button{
-    text-transform: capitalize !important;
-    color: rgba(0,0,0,0.7) !important;
-    font-size: 18px !important;
+.nav .catTab {
     padding: 10px 25px !important;
-}
-
-.nav nav ul li button a{
-    text-decoration: none !important;
-    color: rgba(0,0,0,0.8) !important;
-    font-size: 20px !important;
-}
-
-.nav .part3 .phNo svg{
-    font-size: 30px !important;
-    opacity: 0.8;
-}
-.nav .part3 .phNo h3{
-    font-size: 22px !important;
-    line-height: 25px !important;
+    font-size: 16px !important;
+    text-transform: capitalize !important;
+    background-color: #3bb77e !important;
+    color: white !important;
+    border-radius: 5px !important;
     font-weight: bold;
 }
-.nav .part3 .phNo p{
-    font-weight: 100;
-    font-size: 15px !important;
-    opacity: 0.8px;
+
+.nav nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    list-style: none;
 }
-.nav .part3 .phNo .info{
-    margin-left: 15px !important;
-    margin-top: 8px !important;
+
+.nav nav ul li button {
+    text-transform: capitalize !important;
+    font-size: 16px !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    font-weight: 500 !important;
+}
+
+.nav nav ul li button a {
+    text-decoration: none !important;
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.nav nav ul li button a:hover {
+    color: #3bb77e !important;
+}
+
+.nav .part3 .phNo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav .support-icon {
+    font-size: 30px;
+    color: #3bb77e;
+    opacity: 0.8;
+}
+
+.nav .part3 .phNo h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+    margin: 0;
+}
+
+.nav .part3 .phNo p {
+    font-size: 14px;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+    .nav .catTab {
+        font-size: 14px !important;
+        padding: 8px 15px !important;
+    }
+
+    .nav nav ul li button {
+        font-size: 14px !important;
+        padding: 5px 10px !important;
+    }
+
+    .nav .part3 .phNo h3 {
+        font-size: 16px;
+    }
+
+    .nav .part3 .phNo p {
+        font-size: 12px;
+    }
 }

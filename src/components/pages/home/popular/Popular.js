@@ -5,7 +5,7 @@ import axios from "axios";
 export default function Popular(){
         const [data,setData] = useState([]);
         useEffect(()=>{
-            axios.get("http://localhost:8000/products")
+            axios.get("https://json-server-sik9.onrender.com/products")
             .then(res=>{setData((res.data))})
             .catch(err=>{console.log(err)});
         },[]);

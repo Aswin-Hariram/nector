@@ -1,114 +1,86 @@
 import "../header/Header.css";
-import Modal from 'react-modal';
-import SearchIcon from '@mui/icons-material/Search';
-import Logo from '../../assets/logo.png';
+import SearchIcon from "@mui/icons-material/Search";
+import Logo from "../../assets/logo.png";
 import Select from "./Select";
-import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from '@mui/material/Button';
-import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined';
-import IconCompare from '../../assets/refresh.svg';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { Link } from "react-router-dom";
+import Button from "@mui/material/Button";
+import AutorenewOutlinedIcon from "@mui/icons-material/AutorenewOutlined";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Nav from "../nav/Nav";
-
-import { useEffect, useState } from "react";
 import Login from "./Login";
-import { red } from "@mui/material/colors";
-import axios from "axios";
+import { useContext, useState } from "react";
+import { Context } from "../../App";
+
 export default function Header() {
-    const [cartItems, setCartItems] = useState([]);
-    const [cartCount, setCartCount] = useState([]);
+    const [cartCount] = useContext(Context); // Get cartCount from Context
     const [visible, setVisible] = useState(false);
-    const [status, setStatus] = useState(localStorage.getItem("loginStatus"));
+    const [status, setStatus] = useState(localStorage.getItem("loginStatus") === "true");
 
-
-
-    useEffect(() => {
-        axios.get('http://localhost:8000/cart')
-            .then((response) => {
-                setCartItems(response.data);
-            })
-            .catch(err => console.log(err));
-    }, [])
-
-    function SignOut() {
+    // Handle sign-out logic with page reload
+    const handleSignOut = () => {
         localStorage.setItem("loginStatus", "false");
-        localStorage.setItem("email", "");
-        setStatus("false");
-    }
-
+        localStorage.removeItem("email");
+        setStatus(false); // Update state
+        window.location.replace("/"); // Reload and redirect to root page
+    };
 
     return (
         <header>
-
-            <div className='container-fluid'>
-                <div className='row'>
-                    <div className="srow">
-                        <div className='col-sm-2'>
-                            <img src={Logo} alt='Logo' />
-                        </div>
-                        <div className='col-sm-5 search_box'>
-                            <div className='headerSearch d-flex align-items-center'>
-                                <Select />
-
-                                <div className='search'>
-                                    <input placeholder='Search' />
-                                    <SearchIcon className='searchIcon' />
-                                </div>
+            <div className="container-fluid">
+                <div className="row align-items-center">
+                    <div className="col-md-2 text-center">
+                        <img src={Logo} alt="Logo" className="logo" />
+                    </div>
+                    <div className="col-md-5 search-box">
+                        <div className="header-search d-flex align-items-center">
+                            <Select />
+                            <div className="search">
+                                <input type="text" placeholder="Search" />
+                                <SearchIcon className="search-icon" />
                             </div>
                         </div>
-                        <div className="col-sm-5">
-                            <ul className="list list-inline mb-0 header-Tabs">
-                                <li className="list-inline-item">
-                                    <AutorenewOutlinedIcon className="cart" />
-                                    <span className="badge">0</span>
-                                    Compare
-                                </li>
-                                <li className="list-inline-item">
-                                    <FavoriteBorderOutlinedIcon className="cart" />
-                                    <span className="badge">0</span>
-                                    Whishlist
-                                </li>
-                                <li className="list-inline-item">
-                                    <span><Link to="/Cart"><ShoppingCartOutlinedIcon className="cart" /></Link></span>
-                                    <span className="badge">{0}</span>
-                                    Cart
-                                </li>
-
-
-
-
-                                <li className="list-inline-item btn">
-                                    {
-                                        status === "false" && <div>
-
-                                            <Button onClick={() => { setVisible(!visible) }} className="bg-g">Login/Signup</Button>
-                                        </div>
-                                    }
-                                    {
-                                        status === "true" && <div>
-
-                                            <Button onClick={() => { SignOut(); }} style={{ background: 'red' }}>Signout</Button>
-                                        </div>
-                                    }
-                                </li>
-
-
-                            </ul>
-                        </div>
+                    </div>
+                    <div className="col-md-5">
+                        <ul className="list-inline mb-0 header-tabs d-flex justify-content-end align-items-center">
+                            <li className="list-inline-item position-relative">
+                                <AutorenewOutlinedIcon className="icon" style={{ fontSize: 33 }} />
+                                <span className="badge">0</span> <strong>Compare</strong>
+                            </li>
+                            <li className="list-inline-item position-relative">
+                                <FavoriteBorderOutlinedIcon className="icon" style={{ fontSize: 33 }} />
+                                <span className="badge">0</span> <strong>Wishlist</strong>
+                            </li>
+                            <li className="list-inline-item position-relative">
+                                <Link to="/Cart" className="Link">
+                                    <ShoppingCartOutlinedIcon className="icon" style={{ fontSize: 33, color: "black" }} />
+                                </Link>
+                                <span className="badge">{cartCount}</span> <strong>Cart</strong>
+                            </li>
+                            <li className="list-inline-item">
+                                {status ? (
+                                    <Button onClick={handleSignOut} className="signout-btn">
+                                        Sign Out
+                                    </Button>
+                                ) : (
+                                    <Button
+                                        onClick={() => setVisible((prev) => !prev)}
+                                        className="bg-g login-btn"
+                                    >
+                                        Login/Signup
+                                    </Button>
+                                )}
+                            </li>
+                        </ul>
                     </div>
                 </div>
-
-
             </div>
             <Nav />
-            {visible && <div className="body-login">
-
-
-                <Login data={visible} setStatus={setStatus} setVisible={setVisible} />
-            </div>}
+            {visible && (
+                <div className="body-login">
+                    <Login setStatus={setStatus} setVisible={setVisible} />
+                </div>
+            )}
         </header>
-
     );
 }
